@@ -40,6 +40,8 @@
     "packageFolder": "com/rfb",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["RfbLocation", "RfbEvent", "RfbEventAttendance", "RfbUser"],
+    "lastLiquibaseTimestamp": 1617513463000
   }
 }
