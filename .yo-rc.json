@@ -15,7 +15,7 @@
     "dtoSuffix": "DTO",
     "testFrameworks": [],
     "pages": [],
-    "creationTimestamp": 1617509456048,
+    "creationTimestamp": 1617583076910,
     "serviceDiscoveryType": false,
     "reactive": false,
     "authenticationType": "oauth2",
@@ -42,6 +42,6 @@
     "clientThemeVariant": "",
     "languages": ["en", "fr"],
     "entities": ["RfbLocation", "RfbEvent", "RfbEventAttendance", "RfbUser"],
-    "lastLiquibaseTimestamp": 1617513463000
+    "lastLiquibaseTimestamp": 1617584668000
   }
 }
