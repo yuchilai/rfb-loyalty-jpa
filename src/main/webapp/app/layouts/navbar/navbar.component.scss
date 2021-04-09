@@ -17,26 +17,40 @@ Navbar
 
 .navbar {
   padding: 0.2rem 1rem;
+  background-color: #ffffff;
+  opacity: 0.8;
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 
   ul.navbar-nav {
     .nav-item {
       margin-left: 0.5em;
     }
+    font-size: large;
+    color: #000000;
+    opacity: 0.9;
   }
 
   a.nav-link {
     font-weight: 400;
   }
+  //:hover{
+  //  color:crimson;
+  //}
 }
 
 /* ==========================================================================
 Logo styles
 ========================================================================== */
 .logo-img {
-  height: 45px;
-  width: 45px;
-  display: inline-block;
+  height: 55px;
+  width: 155px;
+  display: block;
   vertical-align: middle;
-  background: url('../../../content/images/logo-jhipster.png') no-repeat center center;
+  background: url('../../../content/images/Running.png') no-repeat center center;
   background-size: contain;
+  z-index: 99;
 }

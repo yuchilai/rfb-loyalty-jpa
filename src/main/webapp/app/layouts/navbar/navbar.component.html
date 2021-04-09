@@ -1,8 +1,9 @@
-<nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-dark">
+<!--<nav data-cy="navbar" class="navbar navbar-expand-md" [style.background-color]="'color'">-->
+<nav data-cy="navbar" class="navbar navbar-expand-md" [style.background-color]="'color'">
   <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
     <span class="logo-img"></span>
-    <span class="navbar-title">Rfbloyaltyjpa</span>
-    <span class="navbar-version">{{ version }}</span>
+    <!--    <span class="navbar-title">Rfbloyaltyjpa</span>-->
+    <!--    <span class="navbar-version">{{ version }}</span>-->
   </a>
   <a
     class="navbar-toggler d-lg-none"
@@ -23,6 +24,38 @@
           <span>
             <fa-icon icon="home"></fa-icon>
             <span>Home</span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+          <span>
+            <fa-icon icon="road"></fa-icon>
+            <span>Location</span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+          <span>
+            <fa-icon icon="image"></fa-icon>
+            <span>Gallery</span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+          <span>
+            <fa-icon icon="book"></fa-icon>
+            <span>Press</span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+          <span>
+            <fa-icon icon="store"></fa-icon>
+            <span>Store</span>
           </span>
         </a>
       </li>

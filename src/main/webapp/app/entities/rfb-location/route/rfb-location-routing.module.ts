@@ -30,6 +30,9 @@ const rfbLocationRoute: Routes = [
     resolve: {
       rfbLocation: RfbLocationRoutingResolveService,
     },
+    data: {
+      authorities: ['ROLE_ADMIN'],
+    },
     canActivate: [UserRouteAccessService],
   },
   {

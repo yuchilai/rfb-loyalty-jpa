@@ -5,6 +5,7 @@ import { VERSION } from 'app/app.constants';
 import { AccountService } from 'app/core/auth/account.service';
 import { LoginService } from 'app/login/login.service';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'jhi-navbar',
@@ -16,6 +17,7 @@ export class NavbarComponent implements OnInit {
   isNavbarCollapsed = true;
   openAPIEnabled?: boolean;
   version = '';
+  // color = 'transparent';
 
   constructor(
     private loginService: LoginService,
@@ -59,5 +61,12 @@ export class NavbarComponent implements OnInit {
 
   getImageUrl(): string {
     return this.isAuthenticated() ? this.accountService.getImageUrl() : '';
+  }
+  @HostListener('window:scroll', [])
+  onWindowScroll(): any {
+    // const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // if (number > 100) {
+    //   confirm('red');
+    // }
   }
 }
