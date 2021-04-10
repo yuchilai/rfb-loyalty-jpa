@@ -62,7 +62,7 @@
       },
       {
         "id": "ec5705e1-fc1d-4d21-8364-abd3bd4efcd0",
-        "name": "ROLE_USER",
+        "name": "ROLE_RUNNER",
         "description": "Jhipster user role",
         "composite": false,
         "clientRole": false,
@@ -396,7 +396,7 @@
       "name": "Users",
       "path": "/Users",
       "attributes": {},
-      "realmRoles": ["ROLE_USER"],
+      "realmRoles": ["ROLE_RUNNER"],
       "clientRoles": {},
       "subGroups": []
     }

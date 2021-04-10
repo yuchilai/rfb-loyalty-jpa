@@ -33,7 +33,7 @@ import { RouterModule } from '@angular/router';
         path: 'rfb-user',
         data: {
           pageTitle: 'RfbUsers',
-          // authorities: ['ROLE_ADMIN'],
+          authorities: ['ROLE_ADMIN'],
         },
         loadChildren: () => import('./rfb-user/rfb-user.module').then(m => m.RfbUserModule),
       },

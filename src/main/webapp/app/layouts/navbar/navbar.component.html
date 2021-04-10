@@ -28,7 +28,7 @@
         </a>
       </li>
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+        <a class="nav-link" routerLink="rfb-location" (click)="collapseNavbar()">
           <span>
             <fa-icon icon="road"></fa-icon>
             <span>Location</span>
@@ -68,14 +68,21 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
       >
-        <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu" data-cy="entity">
+        <a
+          *jhiHasAnyAuthority="['ROLE_ADMIN', 'ROLE_ORGANIZER']"
+          class="nav-link dropdown-toggle"
+          ngbDropdownToggle
+          href="javascript:void(0);"
+          id="entity-menu"
+          data-cy="entity"
+        >
           <span>
             <fa-icon icon="th-list"></fa-icon>
-            <span>Entities</span>
+            <span>Admin</span>
           </span>
         </a>
         <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
-          <li>
+          <li *jhiHasAnyAuthority="'ROLE_ADMIN'">
             <a
               class="dropdown-item"
               routerLink="rfb-location"
@@ -84,10 +91,10 @@
               (click)="collapseNavbar()"
             >
               <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-              <span>Rfb Location</span>
+              <span>Location</span>
             </a>
           </li>
-          <li>
+          <li *jhiHasAnyAuthority="['ROLE_ADMIN', 'ROLE_ORGANIZER']">
             <a
               class="dropdown-item"
               routerLink="rfb-event"
@@ -96,10 +103,10 @@
               (click)="collapseNavbar()"
             >
               <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-              <span>Rfb Event</span>
+              <span>Event</span>
             </a>
           </li>
-          <li>
+          <li *jhiHasAnyAuthority="'ROLE_ADMIN'">
             <a
               class="dropdown-item"
               routerLink="rfb-event-attendance"
@@ -108,10 +115,10 @@
               (click)="collapseNavbar()"
             >
               <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-              <span>Rfb Event Attendance</span>
+              <span>Event Attendance</span>
             </a>
           </li>
-          <li>
+          <li *jhiHasAnyAuthority="'ROLE_ADMIN'">
             <a
               class="dropdown-item"
               routerLink="rfb-user"
@@ -120,7 +127,7 @@
               (click)="collapseNavbar()"
             >
               <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-              <span>Rfb User</span>
+              <span>Runner</span>
             </a>
           </li>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->

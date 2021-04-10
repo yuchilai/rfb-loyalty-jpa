@@ -71,7 +71,7 @@ class CustomClaimConverterIT {
         user.put("preferred_username", USERNAME);
         user.put("given_name", NAME);
         user.put("family_name", FAMILY_NAME);
-        user.putArray("groups").add(AuthoritiesConstants.ADMIN).add(AuthoritiesConstants.USER);
+        user.putArray("groups").add(AuthoritiesConstants.ADMIN).add(AuthoritiesConstants.RUNNER);
         mockHttpGetUserInfo(user);
 
         // WHEN
@@ -83,7 +83,7 @@ class CustomClaimConverterIT {
             .containsEntry("preferred_username", USERNAME)
             .containsEntry("given_name", NAME)
             .containsEntry("family_name", FAMILY_NAME)
-            .containsEntry("groups", Arrays.asList(AuthoritiesConstants.ADMIN, AuthoritiesConstants.USER));
+            .containsEntry("groups", Arrays.asList(AuthoritiesConstants.ADMIN, AuthoritiesConstants.RUNNER));
     }
 
     @Test

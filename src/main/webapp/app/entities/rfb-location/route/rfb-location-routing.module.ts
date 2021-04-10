@@ -14,7 +14,7 @@ const rfbLocationRoute: Routes = [
     data: {
       defaultSort: 'id,asc',
     },
-    canActivate: [UserRouteAccessService],
+    // canActivate: [UserRouteAccessService],
   },
   {
     path: ':id/view',
@@ -31,7 +31,7 @@ const rfbLocationRoute: Routes = [
       rfbLocation: RfbLocationRoutingResolveService,
     },
     data: {
-      authorities: ['ROLE_ADMIN'],
+      // authorities: ['ROLE_ADMIN'],
     },
     canActivate: [UserRouteAccessService],
   },
@@ -40,6 +40,9 @@ const rfbLocationRoute: Routes = [
     component: RfbLocationUpdateComponent,
     resolve: {
       rfbLocation: RfbLocationRoutingResolveService,
+    },
+    data: {
+      // authorities: ['ROLE_ADMIN'],
     },
     canActivate: [UserRouteAccessService],
   },

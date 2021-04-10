@@ -42,12 +42,12 @@ class SecurityUtilsUnitTest {
     void testGetCurrentUserLoginForOAuth2() {
         SecurityContext securityContext = SecurityContextHolder.createEmptyContext();
         Map<String, Object> claims = new HashMap<>();
-        claims.put("groups", AuthoritiesConstants.USER);
+        claims.put("groups", AuthoritiesConstants.RUNNER);
         claims.put("sub", 123);
         claims.put("preferred_username", "admin");
         OidcIdToken idToken = new OidcIdToken(ID_TOKEN, Instant.now(), Instant.now().plusSeconds(60), claims);
         Collection<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(AuthoritiesConstants.USER));
+        authorities.add(new SimpleGrantedAuthority(AuthoritiesConstants.RUNNER));
         OidcUser user = new DefaultOidcUser(authorities, idToken);
         OAuth2AuthenticationToken auth2AuthenticationToken = new OAuth2AuthenticationToken(user, authorities, "oidc");
         securityContext.setAuthentication(auth2AuthenticationToken);
@@ -82,11 +82,11 @@ class SecurityUtilsUnitTest {
     void testHasCurrentUserThisAuthority() {
         SecurityContext securityContext = SecurityContextHolder.createEmptyContext();
         Collection<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(AuthoritiesConstants.USER));
+        authorities.add(new SimpleGrantedAuthority(AuthoritiesConstants.RUNNER));
         securityContext.setAuthentication(new UsernamePasswordAuthenticationToken("user", "user", authorities));
         SecurityContextHolder.setContext(securityContext);
 
-        assertThat(SecurityUtils.hasCurrentUserThisAuthority(AuthoritiesConstants.USER)).isTrue();
+        assertThat(SecurityUtils.hasCurrentUserThisAuthority(AuthoritiesConstants.RUNNER)).isTrue();
         assertThat(SecurityUtils.hasCurrentUserThisAuthority(AuthoritiesConstants.ADMIN)).isFalse();
     }
 }

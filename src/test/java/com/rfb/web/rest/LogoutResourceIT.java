@@ -43,7 +43,7 @@ class LogoutResourceIT {
     @BeforeEach
     public void before() throws Exception {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("groups", Collections.singletonList(AuthoritiesConstants.USER));
+        claims.put("groups", Collections.singletonList(AuthoritiesConstants.RUNNER));
         claims.put("sub", 123);
         this.idToken = new OidcIdToken(ID_TOKEN, Instant.now(), Instant.now().plusSeconds(60), claims);
 
