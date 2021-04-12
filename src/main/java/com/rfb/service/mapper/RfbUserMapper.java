@@ -9,7 +9,8 @@ import org.mapstruct.*;
  */
 @Mapper(componentModel = "spring", uses = { RfbLocationMapper.class })
 public interface RfbUserMapper extends EntityMapper<RfbUserDTO, RfbUser> {
-    @Mapping(target = "homeLocation", source = "homeLocation", qualifiedByName = "id")
+    //, qualifiedByName = "id"
+    @Mapping(target = "homeLocation", source = "homeLocation")
     RfbUserDTO toDto(RfbUser s);
 
     @Named("id")

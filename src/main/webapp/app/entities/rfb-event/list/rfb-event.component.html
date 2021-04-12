@@ -48,7 +48,7 @@
           <td>{{ rfbEvent.eventCode }}</td>
           <td>
             <div *ngIf="rfbEvent.rfbLocation">
-              <a [routerLink]="['/rfb-location', rfbEvent.rfbLocation?.id, 'view']">{{ rfbEvent.rfbLocation?.id }}</a>
+              <a [routerLink]="['/rfb-location', rfbEvent.rfbLocation?.id, 'view']">{{ rfbEvent.rfbLocation?.locationName }}</a>
             </div>
           </td>
           <td class="text-right">

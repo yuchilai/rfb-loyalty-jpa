@@ -94,6 +94,11 @@ Main page styles
   justify-content: center;
   overflow: hidden;
   background: url('../../content/images/beer-background.jpg') no-repeat center top fixed;
+  img {
+    //border-radius: 50%;
+    //transition-property: all;
+    //transition-duration: 5s;
+  }
   //.background-img-container {
   //  position: absolute;
   //  top: 0;
@@ -115,11 +120,14 @@ Main page styles
 .section3 {
   position: relative;
   overflow: hidden;
-  //background-color: #dc3545;
+  //background-color: #2d2d2d;
+
   height: 100vh;
+  //color: white;
   //opacity: 0.8;
   //background: url('../../content/images/beer-background.jpg') no-repeat center top;
   h1 {
+    //background-color: #f1eeee;
     font-family: Jazz LET, fantasy;
     font-size: 3rem;
     font-weight: bolder;

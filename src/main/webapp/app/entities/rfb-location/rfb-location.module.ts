@@ -11,6 +11,9 @@ import { RfbLocationRoutingModule } from './route/rfb-location-routing.module';
   imports: [SharedModule, RfbLocationRoutingModule],
   declarations: [RfbLocationComponent, RfbLocationDetailComponent, RfbLocationUpdateComponent, RfbLocationDeleteDialogComponent],
   entryComponents: [RfbLocationDeleteDialogComponent],
+  exports: [
+    // RfbLocationComponent
+  ],
   // exports: [RfbLocationComponent,],
 })
 export class RfbLocationModule {}

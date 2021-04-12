@@ -40,7 +40,7 @@
               [ngValue]="rfbEventOption.id === editForm.get('rfbEvent')!.value?.id ? editForm.get('rfbEvent')!.value : rfbEventOption"
               *ngFor="let rfbEventOption of rfbEventsSharedCollection; trackBy: trackRfbEventById"
             >
-              {{ rfbEventOption.id }}
+              {{ rfbEventOption.eventDate }}
             </option>
           </select>
         </div>
@@ -53,7 +53,7 @@
               [ngValue]="rfbUserOption.id === editForm.get('rfbUser')!.value?.id ? editForm.get('rfbUser')!.value : rfbUserOption"
               *ngFor="let rfbUserOption of rfbUsersSharedCollection; trackBy: trackRfbUserById"
             >
-              {{ rfbUserOption.id }}
+              {{ rfbUserOption.username }}
             </option>
           </select>
         </div>

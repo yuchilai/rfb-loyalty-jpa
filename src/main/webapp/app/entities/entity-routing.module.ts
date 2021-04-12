@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-// import {RfbLocationModule} from "app/entities/rfb-location/rfb-location.module";
+import { RfbLocationModule } from 'app/entities/rfb-location/rfb-location.module';
 
 @NgModule({
   imports: [
